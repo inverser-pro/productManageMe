@@ -34,7 +34,7 @@ xmlHTTPRequest.
 
 Логин по умолчанию:
 
-**admin@admin.com**
+admin@admin.com
 
 Пароль:
 
