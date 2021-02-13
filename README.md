@@ -1,6 +1,10 @@
 Система управления товарами
 ===========================
 
+Больше информации:
+https://inverser.pro/200-sistema-upravleniya-tovarami-php
+![](https://f.usemind.org/img/7/200-sistema-upravleniya-tovarami-php.jpg)
+
 ![](https://github.com/inverser-pro/productManageMe/blob/main/_TEST_DB_DELETE_AFTER_ADDED/2021-02-13_23-26.jpg?raw=true)
 
 **ПО:**
