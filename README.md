@@ -1,7 +1,7 @@
 Система управления товарами
 ===========================
 
-!()[https://github.com/inverser-pro/productManageMe/blob/main/_TEST_DB_DELETE_AFTER_ADDED/2021-02-13_23-26.jpg?raw=true]
+![](https://github.com/inverser-pro/productManageMe/blob/main/_TEST_DB_DELETE_AFTER_ADDED/2021-02-13_23-26.jpg?raw=true)
 
 **ПО:**
 
