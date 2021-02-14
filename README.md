@@ -1,6 +1,9 @@
 Система управления товарами
 ===========================
 
+YT:
+https://www.youtube.com/watch?v=PHtleHgSbvA
+
 Больше информации:
 https://inverser.pro/200-sistema-upravleniya-tovarami-php
 ![](https://f.usemind.org/img/7/200-sistema-upravleniya-tovarami-php.jpg)
