@@ -81,6 +81,7 @@ class loginme{
 
         $tokenTxt='. Token error... Попробуйте выйти и авторизироваться снова.';
         $tokenSession=explode('*',$_SESSION['time_token']);//1582274371*127.0.0.1|0-time, 1-ip()
+
         $tokenUserSession=explode('*',decrypt_($_SESSION['userid']));//User ID (int) * IP
         if($tokenLS!==NULL){
 
@@ -106,7 +107,7 @@ class loginme{
                     exit;
                 }
             }
-            //Проверим совпадают ли все ID
+            //Проверим, совпадают ли все ID
             if($tokenLS[0] != $tokenUserSession[0]){
                 echo self::json('error','E026'.$tokenTxt);
                 exit;
@@ -204,8 +205,7 @@ class loginme{
         }
 
         self::checkEmpty(array(getenv('HTTP_REFERER')));
-        self::checkToken($token);
-
+        // self::checkToken($token);
         //DB checkers
         $db=new db;
 
@@ -297,6 +297,12 @@ class loginme{
                 header("Location: /products");
                 exit;
             }
+        }
+
+
+        if(!isset($data)){
+            $data=[];
+            $data['role']=-1;
         }
         return $data['role'];
     }

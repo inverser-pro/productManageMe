@@ -142,7 +142,7 @@ CREATE TABLE IF NOT EXISTS `flr_users` (
 --
 
 INSERT INTO `flr_users` (`id`, `name`, `email`, `dateCreate`, `role`, `comment`, `password`, `state`) VALUES
-(854, 'Admin', 'admin@admin.com', '2020-02-21 09:45:23', 1, 'Не удаляйте эту учетную запись...', '$2y$12$htAEW787AfBrw68wingdkezjPomIicEmU7SU8zoiWaYCqdMJhxr.6', 1);
+(854, 'Admin', 'admin@admin.com', '2020-02-21 09:45:23', 1, 'ПОМЕНЯЙТЕ ПАРОЛЬ АДМИНИСТРАТОРА! Не удаляйте эту учетную запись...', '$2y$12$htAEW787AfBrw68wingdkezjPomIicEmU7SU8zoiWaYCqdMJhxr.6', 1);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
