@@ -56,6 +56,7 @@ https://stackoverflow.com/questions/12924896/rewrite-all-requests-to-index-php-w
 СМ. nginx_conf_example.zip
 ~~~~
 ```
+index index.php
 location / {
     set $page_to_view "/index.php";
     try_files $uri $uri/ @rewrites;
