@@ -37,7 +37,42 @@ jQuery
 
 Возможность добавлять поставщиков (только Администратор) и добавлять для
 каждого из них свою цену в каждом товаре.
+-----------
+ВНИМАНИЕ! Все запросы Вам необходимо перенаправлять на index.php.
+Для Apache необходимо создать файл `.htaccess`, размещённый в корне сайта (там, где все файлы из архива), со след. содержимым:
+https://stackoverflow.com/questions/18406156/redirect-all-to-index-php-using-htaccess
+```
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php?path=$1 [NC,L,QSA]
+```
+Для NGINX необходимо в конфигурации серввера и Вашего сайта добавить следующий код или поискать альтернативу
+https://stackoverflow.com/questions/12924896/rewrite-all-requests-to-index-php-with-nginx
+```
+location / {
+    set $page_to_view "/index.php";
+    try_files $uri $uri/ @rewrites;
+    root   /var/www/site;
+    index  index.php index.html index.htm;
+}
 
+location ~ \.php$ {
+    include /etc/nginx/fastcgi_params;
+    fastcgi_pass  127.0.0.1:9000;
+    fastcgi_index index.php;
+    fastcgi_param SCRIPT_FILENAME /var/www/site$page_to_view;
+}
+
+# rewrites
+location @rewrites {
+    if ($uri ~* ^/([a-z]+)$) {
+        set $page_to_view "/$1.php";
+        rewrite ^/([a-z]+)$ /$1.php last;
+    }
+}
+```
+--------------
 Логин по умолчанию:
 
 admin@admin.com
