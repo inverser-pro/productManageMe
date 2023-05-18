@@ -47,7 +47,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /index.php?path=$1 [NC,L,QSA]
 ```
-Для NGINX необходимо в конфигурации серввера и Вашего сайта добавить следующий код или поискать альтернативу
+Для NGINX необходимо в конфигурации сервера и/или Вашего сайта добавить следующий код или поискать альтернативу
 https://stackoverflow.com/questions/12924896/rewrite-all-requests-to-index-php-with-nginx
 ```
 location / {
