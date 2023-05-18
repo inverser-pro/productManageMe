@@ -41,6 +41,9 @@ jQuery
 ВНИМАНИЕ! Все запросы Вам необходимо перенаправлять на index.php.
 Для Apache необходимо создать файл `.htaccess`, размещённый в корне сайта (там, где все файлы из архива), со след. содержимым:
 https://stackoverflow.com/questions/18406156/redirect-all-to-index-php-using-htaccess
+~~~~
+СМ. apache_htaccess_example.zip
+~~~~
 ```
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -49,6 +52,9 @@ RewriteRule ^(.*)$ /index.php?path=$1 [NC,L,QSA]
 ```
 Для NGINX необходимо в конфигурации сервера и/или Вашего сайта добавить следующий код или поискать альтернативу
 https://stackoverflow.com/questions/12924896/rewrite-all-requests-to-index-php-with-nginx
+~~~~
+СМ. nginx_conf_example.zip
+~~~~
 ```
 location / {
     set $page_to_view "/index.php";
